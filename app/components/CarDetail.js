@@ -16,6 +16,7 @@ export default function CarDetails({ carData, onClear }) {
     const getImage = async () => {
       if (!imageRef) return;
       const storageRef = ref(storage, imageRef);
+      console.log("🚀 ~ getImage ~ storageRef:", storageRef)
       try {
         const url = await getDownloadURL(storageRef);
         setImageUrl(url);
@@ -89,28 +90,7 @@ export default function CarDetails({ carData, onClear }) {
               onLoad={() => setImageLoaded(true)}
             />
           ) : (
-            <div className="flex items-center justify-center h-56 sm:h-64 lg:h-72 bg-gray-200">
-              <svg
-                className="animate-spin h-10 w-10 text-gray-500"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <circle
-                  className="opacity-25"
-                  cx="12"
-                  cy="12"
-                  r="10"
-                  stroke="currentColor"
-                  strokeWidth="4"
-                ></circle>
-                <path
-                  className="opacity-75"
-                  fill="currentColor"
-                  d="M4 12a8 8 0 018-8v8H4z"
-                ></path>
-              </svg>
-            </div>
+            <div></div>
           )}
         </div>
 
