@@ -1,16 +1,39 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import logotipoAmiggoApp from "../../public/assets/logotipo.png";
 import unionIcon from "../../public/assets/union-icon.png";
 import contactIcon from "../../public/assets/amiggo-contacto.png";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
+
+  const [linkUrl, setLinkUrl] = useState('https://amiggoapp.com/'); 
+
+  useEffect(() => {
+    // This code runs on the client side
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(userAgent)) {
+      // Android device
+      setLinkUrl('https://play.google.com/store/apps/details?id=com.amiggoapp.stable');
+    } else if (/iPad|iPhone/.test(userAgent) && !window.MSStream) {
+      // iOS device
+      setLinkUrl('https://apps.apple.com/es/app/amiggoapp-coche-sustituci%C3%B3n/id6661026853');
+    }
+  }, []);
+
+
   return (
     <div className="bg-white rounded-2xl pt-4 lg:pt-10 px-4 lg:px-10 pb-4 lg:pb-12">
       <div className="flex flex-wrap -m-4 mb-2">
         <div className="w-full p-4">
           <div className="h-full rounded-3xl pl-4 lg:pl-18 pr-4 lg:pr-16">
-            <h1 className="font-heading font-semibold max-w-xl mb-5 text-xl" />
+            <div className="flex flex-wrap gap-8 mb-4 justify-center">
+              <h3 className="mb-2 text-green-600 text-center">
+                Hemos ayudado a encontrar: <span className="font-bold">1028 vehículos.</span>
+              </h3>
+            </div>
             <div className="flex flex-wrap gap-8 mb-4 justify-center">
               <Link
                 className="inline-flex justify-center items-center text-center font-semibold tracking-tight text-white bg-green-500 hover:bg-green-800 focus:bg-green-800 rounded-lg focus:ring-4 focus:ring-neutral-400 transition duration-200 px-6 py-2 w-full md:w-auto sm:min-w-[300px] h-[65px]"
@@ -41,7 +64,7 @@ export default function Hero() {
               </p>
               <Link
                 className="inline-block px-4 py-3 bg-green-500 text-white rounded-md text-sm font-semibold hover:bg-green-700 focus:ring-2 focus:ring-green-400 transition duration-200"
-                href="/amiggoappcontacto"
+                href={linkUrl}
               >
                 AmiggoApp
               </Link>
@@ -94,7 +117,7 @@ export default function Hero() {
                 className="inline-block px-4 py-3 bg-dark-blue text-white rounded-md text-sm font-semibold hover:bg-blue-700 focus:ring-2 focus:ring-blue-400 transition duration-200"
                 href="/contacto"
               >
-                Llámanos
+                Contáctanos
               </Link>
             </div>
             <Image

@@ -37,7 +37,7 @@ export default function Contact() {
                       <div className="flex items-center gap-3">
                         <FiMapPin className="text-green-500 text-xl" />
                         <span className="text-neutral-600 text-lg font-medium">
-                          Calle Ejemplo 123, Madrid, España
+                        Eloy Gonzalo 4, 1C 28010 Madrid, España
                         </span>
                       </div>
                     </div>

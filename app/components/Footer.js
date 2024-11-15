@@ -17,7 +17,7 @@ export default function Footer() {
               />
             </Link>
             <p className="text-neutral-600 text-xs lg:text-sm font-medium tracking-tight">
-              © AmiggoAppDana 2024. Todos los derechos reservados
+              © Amiggo Coche Dana 2024. Todos los derechos reservados
             </p>
           </div>
 
