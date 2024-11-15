@@ -11,6 +11,7 @@ import { ref, uploadBytes } from "firebase/storage";
 
 import { storage } from "../config/firebase";
 import { imageUrlGenerator } from "../lib/cars";
+import TotalRegisteredCars from "../components/TotalRegisteredCars";
 
 export default function CarRegistrationForm() {
   const CARS_API = process.env.NEXT_PUBLIC_CARS_API
@@ -299,9 +300,7 @@ export default function CarRegistrationForm() {
       <h5 className="text-3xl font-semibold mb-4 font-heading">
         Registro de Vehículo Encontrado
       </h5>
-      <h3 className="mb-2 text-green-600">
-        Total de Vehículos registrados: <span className="font-bold">1028</span>
-      </h3>
+      <TotalRegisteredCars />
       <div className="mb-2 p-3 bg-yellow-50 border border-yellow-200 rounded-lg">
         <p className="text-orange-800 font-medium mb-2 text-sm">
           Este formulario <span className="font-bold">NO</span> está destinado

@@ -31,11 +31,11 @@ export default function TotalRegisteredCars() {
   }, [CARS_API]);
 
   if (isLoading) {
-    return <p className="text-sm text-gray-500">Cargando...</p>;
+    return <p className="text-sm text-gray-500 mb-2">Cargando...</p>;
   }
 
   if (error) {
-    return <p className="text-sm text-red-500">{error}</p>;
+    return <p className="text-sm text-red-500 mb-2">{error}</p>;
   }
 
   return (
