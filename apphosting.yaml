@@ -41,3 +41,8 @@ env:
     availability:
     -   BUILD
     -   RUNTIME
+  - variable: NEXT_PUBLIC_CARS_API
+    value: /api/cars
+    availability:
+    -   BUILD
+    -   RUNTIME

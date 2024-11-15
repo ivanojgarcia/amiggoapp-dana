@@ -13,7 +13,7 @@ import { storage } from "../config/firebase";
 import { imageUrlGenerator } from "../lib/cars";
 
 export default function CarRegistrationForm() {
-  const CARS_API = '/api/cars'
+  const CARS_API = process.env.NEXT_PUBLIC_CARS_API
   const [canShareLocation, setCanShareLocation] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [latitude, setLatitude] = useState(0);

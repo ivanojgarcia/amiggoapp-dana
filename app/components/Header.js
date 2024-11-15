@@ -13,9 +13,10 @@ export default function Header() {
 
   return (
     <nav className="relative bg-white mb-6 px-10 lg:pl-20 py-7 lg:py-4 rounded-2xl">
-      <div className="flex items-center justify-between">
+      {/* Encabezado principal */}
+      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
         {/* Logo */}
-        <div className="flex items-center justify-between w-full lg:w-auto">
+        <div className="flex items-center justify-between w-full lg:w-auto mb-4 lg:mb-0">
           {/* Botón del menú solo visible en móviles */}
           <button
             className="block lg:hidden order-1 lg:order-none lg:pr-9"
@@ -50,79 +51,100 @@ export default function Header() {
             <FiHome />
           </Link>
           <Link
-            href="/login"
-            className="inline-flex justify-center items-center h-8 px-3 font-semibold text-sm bg-transparent hover:bg-transparent focus:bg-transparent border border-transparent rounded-lg focus:ring-4 focus:ring-transparent transition duration-200 focus:text-green-500"
+            href="/amiggoapp"
+            className="inline-block px-4 py-2 rounded-md text-sm font-medium transition duration-200"
           >
             Inicio de Sesión
           </Link>
-          {/* <Link
-            href="/registro-voluntario"
-            className="inline-flex justify-center items-center h-8 px-3 font-semibold text-sm hover:text-white focus:text-white bg-transparent border rounded-lg focus:ring-4 transition duration-200 border-green-500 hover:bg-green-500 focus:bg-green-500 focus:ring-green-400"
+          <Link
+            href="/contacto"
+            className="inline-block px-4 py-2 bg-green-500 text-white rounded-md text-sm font-medium hover:bg-green-700 focus:ring-2 focus:ring-green-400 transition duration-200"
           >
-            Registro de Voluntario
-          </Link> */}
+            Contáctanos
+          </Link>
         </div>
       </div>
 
       {/* Navegación móvil */}
-      {isMenuOpen && (
-        <div className="fixed top-0 left-0 bottom-0 w-5/6 max-w-xs z-50">
-          {/* Fondo oscuro */}
-          <div
-            className="fixed inset-0 bg-black opacity-20"
-            onClick={toggleMenu}
-          />
-          <nav className="relative p-8 w-full h-full bg-white overflow-y-auto ">
-            <div className="flex flex-col justify-between h-full">
-              {/* Logo y botón de cerrar menú */}
-              <div className="flex items-center justify-between mb-16">
-                <Link href="/">
-                  <Image
-                    className="h-10 w-auto"
-                    src={logoAmiggoAppDana}
-                    alt="AmiggoApp-Dana Logo"
-                  />
-                </Link>
-                <button onClick={toggleMenu}>
-                  <svg
-                    width={24}
-                    height={24}
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M6 18L18 6M6 6L18 18"
-                      stroke="#252E4A"
-                      strokeWidth={2}
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-
-              {/* Enlaces del menú móvil */}
-              <div className="flex flex-col items-center gap-2">
-                <Link
-                  href="/login"
-                  className="inline-flex justify-center items-center w-full h-8 px-3 font-semibold text-medium focus:text-neutral-900 bg-transparent hover:bg-transparent focus:bg-transparent border border-transparent rounded-lg focus:ring-4 focus:ring-transparent transition duration-200"
-                  onClick={toggleMenu}
-                >
-                  Inicio de Sesión
-                </Link>
-                {/* <Link
-                  href="/registro"
-                  className="inline-flex justify-center items-center w-full h-8 px-3 font-semibold text-medium hover:text-white focus:text-white bg-transparent border rounded-lg focus:ring-4 transition duration-200 hover:bg-green-500 focus:ring-green-400 focus:bg-green-500 border-green-500"
-                  onClick={toggleMenu}
-                >
-                  Registro de Voluntario
-                </Link> */}
-              </div>
-            </div>
-          </nav>
+{isMenuOpen && (
+  <div className="fixed top-0 left-0 bottom-0 w-5/6 max-w-xs z-50">
+    {/* Fondo oscuro */}
+    <div
+      className="fixed inset-0 bg-black opacity-20"
+      onClick={toggleMenu}
+    />
+    <nav className="relative p-8 w-full h-full bg-white overflow-y-auto">
+      <div className="flex flex-col h-full">
+        {/* Logo y botón de cerrar menú */}
+        <div className="flex items-center justify-between mb-6">
+          <Link href="/">
+            <Image
+              className="h-10 w-auto"
+              src={logoAmiggoAppDana}
+              alt="AmiggoApp-Dana Logo"
+            />
+          </Link>
+          <button onClick={toggleMenu}>
+            <svg
+              width={24}
+              height={24}
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6 18L18 6M6 6L18 18"
+                stroke="#252E4A"
+                strokeWidth={2}
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
-      )}
+
+        {/* Enlaces del menú móvil */}
+        <div className="flex flex-col items-stretch gap-4">
+          <Link
+            href="/buscar-coche"
+            className="inline-block w-full px-4 py-2 bg-blue-base rounded-md text-sm font-medium text-center hover:bg-blue-700 hover:text-white focus:ring-2 focus:ring-blue-400 transition duration-200"
+            onClick={toggleMenu}
+          >
+            Inicio
+          </Link>
+          <Link
+            href="/buscar-coche"
+            className="inline-block w-full px-4 py-2 bg-green-500 text-white rounded-md text-sm font-medium text-center hover:bg-green-700 focus:ring-2 focus:ring-green-400 transition duration-200"
+            onClick={toggleMenu}
+          >
+            Buscar Coche
+          </Link>
+          <Link
+            href="/registrar-coche"
+            className="inline-block w-full px-4 py-2 bg-green-500 text-white rounded-md text-sm font-medium text-center hover:bg-green-700 focus:ring-2 focus:ring-green-400 transition duration-200"
+            onClick={toggleMenu}
+          >
+            Registrar Coche
+          </Link>
+          <Link
+            href="/amiggoapp"
+            className="inline-block w-full px-4 py-2 bg-green-500 text-white rounded-md text-sm font-medium text-center hover:bg-green-700 focus:ring-2 focus:ring-green-400 transition duration-200"
+            onClick={toggleMenu}
+          >
+            AmiggoApp
+          </Link>
+          <Link
+            href="/contacto"
+            className="inline-block w-full px-4 py-2 bg-green-500 text-white rounded-md text-sm font-medium text-center hover:bg-green-700 focus:ring-2 focus:ring-green-400 transition duration-200"
+            onClick={toggleMenu}
+          >
+            Contáctanos
+          </Link>
+        </div>
+      </div>
+    </nav>
+  </div>
+)}
     </nav>
   );
 }

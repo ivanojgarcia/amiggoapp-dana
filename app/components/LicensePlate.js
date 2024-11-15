@@ -11,7 +11,7 @@ export default function LicensePlateSearch() {
   const [showToastError, setShowToastError] = useState(false);
   const [errorToastMessage, setToastErrorMessage] = useState("");
 
-  const CARS_API = '/api/cars';
+  const CARS_API = process.env.NEXT_PUBLIC_CARS_API;
 
   const handleValidateLicensePlate = async () => {
     if (!licensePlate.trim()) {

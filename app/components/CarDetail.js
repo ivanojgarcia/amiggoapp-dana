@@ -16,7 +16,6 @@ export default function CarDetails({ carData, onClear }) {
     const getImage = async () => {
       if (!imageRef) return;
       const storageRef = ref(storage, imageRef);
-      console.log("🚀 ~ getImage ~ storageRef:", storageRef)
       try {
         const url = await getDownloadURL(storageRef);
         setImageUrl(url);

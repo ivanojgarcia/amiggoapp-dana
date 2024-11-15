@@ -5,6 +5,7 @@ import logotipoAmiggoApp from "../../public/assets/logotipo.png";
 import unionIcon from "../../public/assets/union-icon.png";
 import contactIcon from "../../public/assets/amiggo-contacto.png";
 import { useEffect, useState } from "react";
+import TotalRegisteredCars from "./TotalRegisteredCars";
 
 export default function Hero() {
 
@@ -30,9 +31,7 @@ export default function Hero() {
         <div className="w-full p-4">
           <div className="h-full rounded-3xl pl-4 lg:pl-18 pr-4 lg:pr-16">
             <div className="flex flex-wrap gap-8 mb-4 justify-center">
-              <h3 className="mb-2 text-green-600 text-center">
-                Hemos ayudado a encontrar: <span className="font-bold">1028 vehículos.</span>
-              </h3>
+              <TotalRegisteredCars />
             </div>
             <div className="flex flex-wrap gap-8 mb-4 justify-center">
               <Link
