@@ -594,11 +594,7 @@ export default function CarRegistrationForm() {
               className="text-green-500 hover:underline"
               href="/terminos-y-condiciones"
               target="_blank"
-              >términos</Link> y la <Link
-              className="text-green-500 hover:underline"
-              href="/politica-de-privacidad"
-              target="_blank"
-              >
+              >términos y la
               política de privacidad
               </Link>
             </label>

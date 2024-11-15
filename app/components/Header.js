@@ -51,7 +51,7 @@ export default function Header() {
             <FiHome />
           </Link>
           <Link
-            href="/amiggoapp"
+            href="/contacto"
             className="inline-block px-4 py-2 rounded-md text-sm font-medium transition duration-200"
           >
             Inicio de Sesión
@@ -106,7 +106,7 @@ export default function Header() {
         {/* Enlaces del menú móvil */}
         <div className="flex flex-col items-stretch gap-4">
           <Link
-            href="/buscar-coche"
+            href="/"
             className="inline-block w-full px-4 py-2 bg-blue-base rounded-md text-sm font-medium text-center hover:bg-blue-700 hover:text-white focus:ring-2 focus:ring-blue-400 transition duration-200"
             onClick={toggleMenu}
           >
