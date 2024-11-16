@@ -51,7 +51,7 @@ export default function Header() {
             <FiHome />
           </Link>
           <Link
-            href="/contacto"
+            href="/login"
             className="inline-block px-4 py-2 rounded-md text-sm font-medium transition duration-200"
           >
             Inicio de Sesión
