@@ -4,6 +4,7 @@ import { carMapersResponse } from "@/app/mappers/carsMappers";
 
 export async function addCarDataModule(data) {
     data.createdAt = Timestamp.now();
+    data.type = "site";
     return await addCarData(data);
 }
 
