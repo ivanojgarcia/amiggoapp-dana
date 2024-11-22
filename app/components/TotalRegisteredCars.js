@@ -18,7 +18,7 @@ export default function TotalRegisteredCars() {
           throw new Error("Failed to fetch car count.");
         }
         const {data} = await response.json();
-        setCarCount(data || 0); // Assuming the response contains a `count` property
+        setCarCount(data || 0); 
       } catch (err) {
         console.error("Error fetching car count:", err);
         setError("No se pudo cargar el contador de vehículos.");
