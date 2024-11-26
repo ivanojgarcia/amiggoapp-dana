@@ -2,7 +2,7 @@ import { NextResponse } from "next/server"
 import { getCountModule } from "@/app/module/cars/carModule";
 
 export const GET = async (request) => {
-    const plusCars = 3006
+    const plusCars = 3606
     try {
         const data = await getCountModule();
         const total = data + plusCars
