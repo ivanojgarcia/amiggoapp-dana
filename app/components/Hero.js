@@ -53,12 +53,12 @@ export default function Hero() {
       <div className="flex flex-wrap gap-6 justify-center">
         {/* Caja 1 */}
         <div className="w-full md:w-1/2 lg:w-1/3 max-w-sm">
-          <div className="rounded-lg p-6 h-full relative overflow-hidden bg-blue-base shadow-md">
+          <div className="rounded-lg p-6 h-full relative overflow-hidden bg-red-500 shadow-md">
             <div className="flex flex-col items-start gap-4 h-full relative z-20">
-              <h2 className="font-heading text-lg lg:text-xl tracking-tight font-semibold">
+              <h2 className="font-heading text-lg lg:text-xl tracking-tight font-semibold text-white">
                 Recibe hasta 75€, si tu vehículo es Reparable
               </h2>
-              <p className="text-sm lg:text-lg tracking-tight font-medium">
+              <p className="text-sm lg:text-lg tracking-tight font-medium text-white">
                 Descárgate AmiggoApp Tengas el seguro que tengas.
               </p>
               <Link
@@ -69,7 +69,7 @@ export default function Hero() {
               </Link>
             </div>
             <Image
-              className="absolute inset-0 w-full h-full object-cover opacity-10"
+              className="absolute inset-0 w-full h-full object-cover opacity-15"
               src={logotipoAmiggoApp}
               alt="AmiggoApp"
             />
