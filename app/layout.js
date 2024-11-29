@@ -10,6 +10,7 @@ export const metadata = {
     icon: "/assets/favicon_io/favicon.ico",
     apple: "/assets/favicon_io/apple-touch-icon.png",
   },
+  author: "Ivabo Junior Garcia, @ivanojgarcia",
   manifest: "/assets/favicon_io/site.webmanifest",
 };
 
