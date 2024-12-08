@@ -27,9 +27,13 @@ export async function getCars() {
 }
 
 export async function getCarsCount() {
-  const carsCollection = collection(db, "cars");
-  const snapshot = await getCountFromServer(carsCollection);
-  return snapshot.data().count;
+  const querySnapshot = await getDocs(collection(db, "couter"));
+  const cars = [];
+  querySnapshot.forEach((doc) => {
+    cars.push({ id: doc.id, ...doc.data() });
+  });
+  return cars;
+
 }
 
 export async function getCarById(id) {
