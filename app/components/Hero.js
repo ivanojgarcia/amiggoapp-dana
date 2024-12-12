@@ -6,6 +6,7 @@ import unionIcon from "../../public/assets/union-icon.png";
 import contactIcon from "../../public/assets/amiggo-contacto.png";
 import { useEffect, useState } from "react";
 import TotalRegisteredCars from "./TotalRegisteredCars";
+import AboutSection from "./AboutSection";
 
 export default function Hero() {
 
@@ -127,6 +128,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      <AboutSection />
     </div>
   );
 }
